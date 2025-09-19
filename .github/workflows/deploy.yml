@@ -34,7 +34,9 @@ jobs:
         run: npx prisma generate
 
       - name: Build
-        run: npm run build
+        run: |
+          echo "krishnaraman.com" > CNAME
+          npm run build
         env:
           NODE_ENV: production
 
